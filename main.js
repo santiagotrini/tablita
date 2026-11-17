@@ -22,14 +22,13 @@ function handleClick(event) {
   let icon;
   if (event.target.tagName == 'BUTTON')
     icon = event.target.children[0];
-  else {
+  else  
     icon = event.target;
-    let id = icon.dataset.personId;
-    if (icon.classList.contains('fa-trash'))
-      deleteRow(id);
-    else 
-      editRow(id);
-  }
+  let id = icon.dataset.personId;
+  if (icon.classList.contains('fa-trash'))
+    deleteRow(id);
+  else 
+    editRow(id);
 }
 
 function updateTable() {
@@ -41,7 +40,6 @@ function updateTable() {
 
 function createRow(person) {
   let tr = document.createElement('tr');
-  let id;
   for (let key in person) {
     let td = document.createElement('td');
     td.textContent = person[key];
