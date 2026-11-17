@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Tablita</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css" integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <form onsubmit="handleSubmit(event)">
+    <input type="text" name="nombre">  
+    <input type="text" name="apellido">  
+    <input type="text" name="edad">  
+    <input type="submit" value="guardar">  
+  </form>
+  <table>
+    <thead>
+      <th>id</th>
+      <th>nombre</th>
+      <th>apellido</th>
+      <th>edad</th>
+      <th>acciones</th>
+    </thead>
+    <tbody></tbody>
+  </table>
+</body>
+<script src="main.js"></script>
+</html>
