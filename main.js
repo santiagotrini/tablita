@@ -37,6 +37,18 @@ function deleteRow(id) {
   updateTable();
 }
 
+function editRow(id) {
+  let row = event.target.closest('tr');
+  console.log(row); 
+  let nombre = row.children[1];
+  let apellido = row.children[2];
+  let edad = row.children[3];
+  console.log(nombre,apellido,edad);
+  nombre.contentEditable = true;
+  apellido.contentEditable = true;
+  edad.contentEditable = true;
+}
+
 function updateTable() {
   let tbody = document.querySelector('tbody');
   tbody.innerHTML = '';
