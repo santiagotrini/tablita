@@ -1,4 +1,4 @@
-const persons = JSON.parse(localStorage.getItem('persons')) || [];
+let persons = JSON.parse(localStorage.getItem('persons')) || [];
 updateTable();
 
 function handleSubmit(event) {
@@ -29,6 +29,12 @@ function handleClick(event) {
     deleteRow(id);
   else 
     editRow(id);
+}
+
+function deleteRow(id) {
+  persons = persons.filter(p => p.id != id);
+  localStorage.setItem('persons', JSON.stringify(persons));
+  updateTable();
 }
 
 function updateTable() {
