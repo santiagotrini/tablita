@@ -43,10 +43,14 @@ function editRow(id) {
   let nombre = row.children[1];
   let apellido = row.children[2];
   let edad = row.children[3];
-  console.log(nombre,apellido,edad);
+  let icon = event.target.tagName == 'I' ? event.target : event.target.children[0];
+  console.log(nombre,apellido,edad,icon);
   nombre.contentEditable = true;
   apellido.contentEditable = true;
   edad.contentEditable = true;
+  icon.classList.toggle('fa-floppy-disk');
+  icon.classList.toggle('fa-pencil');
+  
 }
 
 function updateTable() {
